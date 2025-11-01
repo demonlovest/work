@@ -1,17 +1,14 @@
 //202510306114
-//Lixin070514@126.com
+//Lixn070514@126.com
 //李鑫
 #include <stdio.h>
-int main() {
-    printf("100到999之间的水仙花数有:\n");
-    for (int num = 100; num<= 999;num++) {
-    int unit = num % 10;
-    int ten = (num / 10 ) % 10;
-    int hundred = num / 100;
-    int sum = unit*unit*unit+ten*ten*ten+hundred*hundred*hundred;
-    if ( sum == num ) {
-        printf("%d ", num);
-    }    
-    }
+
+int main()
+{
+    float celsius,fahrenheit;
+    printf("请输入摄氏温度：");
+    scanf("%f",&celsius);
+    fahrenheit= celsius*9/5+32;
+    printf("华氏温度为:%.1f\n",fahrenheit);
     return 0;
 }
