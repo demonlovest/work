@@ -2,16 +2,23 @@
 //Lixin070514@126.com
 //李鑫
 #include <stdio.h>
-int main() {
-    printf("100到999之间的水仙花数有:\n");
-    for (int num = 100; num<= 999;num++) {
-    int unit = num % 10;
-    int ten = (num / 10 ) % 10;
-    int hundred = num / 100;
-    int sum = unit*unit*unit+ten*ten*ten+hundred*hundred*hundred;
-    if ( sum == num ) {
-        printf("%d ", num);
-    }    
+int main () {
+    int record[5];
+    int i;
+    printf("请输入当前记录的前4位学生学号：");
+    for (i=0;i<4;i++) {
+        scanf ("%d", &record[i]);
+    }
+    for (i=4;i>0;i--) {
+        record[i]=record[i-1];
+    }
+    record[0]=0;
+    for (i=0;i<5;i++) {
+        if (i==4) {
+            printf("%d", record[i]);
+        } else {
+            printf("%d ", record[i]);
+        }
     }
     return 0;
 }
