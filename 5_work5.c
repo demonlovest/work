@@ -2,36 +2,24 @@
 //Lixin070514@126.com
 //李鑫
 #include <stdio.h>
-int main() {
-    int n,i;
-    int is_prime=1;
-    printf("请输入小于50的正整数作为密钥:");
-    scanf("%d",&n);
-    if (n<=0||n>=50) {
-    printf("输入无效，请重新输入小于50的正整数\n");
-    return 0;
-    }
-    if (n==1) {
-        is_prime = 0;
-    }
-    else if (n==2) {
-        is_prime=1;
-    }
-    else if (n%2==0) {
-        is_prime = 0;
-    }
-    else {
-        for (i=3;i*i<=n;i += 2) {
-            if (n % i == 0) {
-            is_prime = 0;
-            break;    
-            }
+int main () {
+    int arr[5];
+    int count=0;
+    while (count<5) {
+        int num;
+        printf("请输入一个整数：");
+        scanf("%d", &num);
+        if (num%2==0) {
+            arr[count]=num;
+            count++;
         }
     }
-    if (is_prime) {
-        printf("密钥安全，密码设置成功\n");
-    } else {
-        printf("密钥不安全，请重新输入\n");
+    for (int i=0;i<5;i++) {
+        if (i==4) {
+            printf("%d", arr[i]);
+        } else {
+            printf("%d ", arr[i]);
+        }
     }
     return 0;
 }
