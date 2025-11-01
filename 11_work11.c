@@ -1,5 +1,5 @@
 //202510306114
-//Lixin070514@126,com
+//Lixin070514@126.com
 //李鑫
 #include <stdio.h>
 int main () {
