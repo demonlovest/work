@@ -2,18 +2,18 @@
 //Lixin070514@126.com
 //李鑫
 #include <stdio.h>
-int main() {
-    printf("100到999之间的水仙花数有:\n");
-    int num=100;
-    while (num<=999) {
-    int unit = num % 10;
-    int ten = (num / 10 ) % 10;
-    int hundred = num / 100;
-    int sum = unit*unit*unit+ten*ten*ten+hundred*hundred*hundred;
-    if ( sum == num ) {
-        printf("%d ", num);
+int power (int a,int b) {
+    int result=1;
+    for (int i=0;i<b;i++) { 
+        result *= a;
     }
-    num++;    
+    return result;
+}
+int main () {
+    int sum = 0;
+    for (int i=0;i<=5;i++) {
+        sum += power(i,2);
     }
+    printf("1² + 2² + 3² + 4² + 5² = %d\n", sum);
     return 0;
 }
