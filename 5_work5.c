@@ -2,24 +2,30 @@
 //Lixin070514@126.com
 //李鑫
 #include <stdio.h>
+int add(int arr[],int len) {
+    int sum=0;
+    for (int i=0;i<len;i++) {
+        sum +=arr[i];
+    }
+    return sum;
+}
+int ass(int arr[],int len) {
+    int product=1;
+    for (int i=0;i<len;i++) {
+        product*=arr[i];
+    }
+    return product;
+}
 int main () {
     int arr[5];
-    int count=0;
-    while (count<5) {
-        int num;
-        printf("请输入一个整数：");
-        scanf("%d", &num);
-        if (num%2==0) {
-            arr[count]=num;
-            count++;
-        }
+    int length=5;
+    printf("请输入五个整数：");
+    for (int i=0;i<length;i++) {
+        scanf("%d", &arr[i]);
     }
-    for (int i=0;i<5;i++) {
-        if (i==4) {
-            printf("%d", arr[i]);
-        } else {
-            printf("%d ", arr[i]);
-        }
-    }
+    int sum = add(arr, length);
+    int product = ass(arr, length);
+    printf("%d\n", sum);
+    printf("%d\n", product);
     return 0;
 }
